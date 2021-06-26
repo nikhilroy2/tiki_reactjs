@@ -4,6 +4,12 @@ main {
   margin-left: 300px;
 }
 
+@media (max-width: 991px) {
+  main {
+    margin-left: 0px;
+  }
+}
+
 main .tiki_size {
   width: 40px;
   height: 40px;

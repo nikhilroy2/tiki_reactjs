@@ -1,15 +1,11 @@
 import React from 'react';
 import './Main.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleBg } from '../../redux/reducer';
-
-function Main(props) {
+import { useSelector } from 'react-redux';
+function Main() {
     const toggleDefault = useSelector(state => state.toggle.value)
-    const dispatch = useDispatch();
-
     return (
         <main className="py-4">
-            <div className="container-sm">
+            <div className="container-lg">
                 <div className="row">
                     <div className="col-12">
                         <h3 className={toggleDefault? 'text-white': 'text-black'}>
@@ -28,12 +24,12 @@ function Main(props) {
                     </div>
                 </div>
                 <div className="row mt-5">
-                    <div className="col-6 col-md-4 col-lg-3 ">
-                        <div className={`col_wrapper rounded-3 shadow-sm d-flex align-items-center p-3  ${toggleDefault? 'bg_dark_prime': 'bg-white'}`}>
-                            <span className="tiki_size text-white d-flex justify-content-center align-items-center">
+                    <div className="mb-3 col-6 col-xl-3  h-auto">
+                        <div className={`col_wrapper rounded-3 h-100 shadow-sm d-flex flex-column flex-md-row  align-items-center p-3  ${toggleDefault? 'bg_dark_prime': 'bg-white'}`}>
+                            <span className="tiki_size text-white mb-2 mb-md-0 d-flex justify-content-center align-items-center">
                                 <i className="fas fa-database    "></i>
                             </span>
-                            <div className="ms-3 ">
+                            <div className="ms-md-3 ">
                                 <span className={`${toggleDefault?'text-white-50': 'text-black-50'}`}>Your TIKI Holdings</span>
                                 <h5 className={`mb-0 ${toggleDefault?'text-white': 'text-black'} mt-2`}>
                                     0 TIKI
@@ -41,9 +37,9 @@ function Main(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6 col-md-4 col-lg-3 ">
-                        <div className={`col_wrapper rounded-3 shadow-sm d-flex align-items-center p-3  ${toggleDefault? 'bg_dark_prime': 'bg-white'}`}>
-                            <span className="tiki_size bg_cyan text-white d-flex justify-content-center align-items-center">
+                    <div className="mb-3 col-6 col-xl-3  h-auto ">
+                        <div className={`col_wrapper rounded-3 h-100 shadow-sm d-flex flex-column flex-md-row align-items-center p-3  ${toggleDefault? 'bg_dark_prime': 'bg-white'}`}>
+                            <span className="tiki_size bg_cyan  mb-2 mb-md-0 text-white d-flex justify-content-center align-items-center">
                                 <i className="fas fa-dollar-sign    "></i>
                             </span>
 
@@ -56,9 +52,9 @@ function Main(props) {
                         </div>
                     </div>
 
-                    <div className="col-6 col-md-4 col-lg-3 ">
-                        <div className={`col_wrapper rounded-3 d-flex align-items-center p-3 shadow-sm ${toggleDefault? 'bg_dark_prime': 'bg-white'}`}>
-                            <span className="tiki_size bg_primary text-white d-flex justify-content-center align-items-center">
+                    <div className="mb-3 col-6 col-xl-3  h-auto">
+                        <div className={`col_wrapper rounded-3 h-100 d-flex flex-column flex-md-row align-items-center p-3 shadow-sm ${toggleDefault? 'bg_dark_prime': 'bg-white'}`}>
+                            <span className="tiki_size bg_primary  mb-2 mb-md-0 text-white d-flex justify-content-center align-items-center">
                                 <i className="fas fa-lock    "></i>
                             </span>
 
@@ -71,9 +67,9 @@ function Main(props) {
                         </div>
                     </div>
 
-                    <div className="col-6 col-md-4 col-lg-3 ">
-                        <div className={`col_wrapper rounded-3 d-flex align-items-center p-3 shadow-sm  ${toggleDefault? 'bg_dark_prime': 'bg-white'}`}>
-                            <span className="tiki_size bg_yellow text-white d-flex justify-content-center align-items-center">
+                    <div className="mb-3 col-6 col-xl-3  h-auto">
+                        <div className={`col_wrapper rounded-3 h-100 flex-column flex-md-row d-flex align-items-center p-3 shadow-sm  ${toggleDefault? 'bg_dark_prime': 'bg-white'}`}>
+                            <span className="tiki_size bg_yellow  mb-2 mb-md-0 text-white d-flex justify-content-center align-items-center">
                                 <i className="fas fa-history    "></i>
                             </span>
 
